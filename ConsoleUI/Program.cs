@@ -15,7 +15,17 @@ namespace ConsoleUI
             {
                 Console.WriteLine(product.ProductName);
             }
-            
+
+            foreach (var product in productManager.GetAllByCategoryId(2))
+            {
+                Console.WriteLine(product.ProductName);
+            }
+
+            foreach (var product in productManager.GetAllByUnitPrice(50,100))
+            {
+                Console.WriteLine(product.ProductName);
+            }
+
         }
     }
 }
